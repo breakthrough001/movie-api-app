@@ -20,6 +20,13 @@ body {
 a {
   color: #fff;
   font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff517c;
+  transition-timing-function: ease-in-out;
 }
 
 header {
@@ -27,8 +34,26 @@ header {
   background-color: var(--secondary-color);
 }
 
+h1 {
+  color: #fff;
+}
+
 .logo {
   width: 180px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+li {
+  margin: 0 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 .container {
@@ -41,6 +66,7 @@ header {
   background-color: #fff;
   border: 2px solid var(--secondary-color);
   padding: 0.5rem 1rem;
+  margin-left: 20px;
   border-radius: 50px;
   font-size: 1rem;
   color: red;
@@ -72,7 +98,7 @@ header {
 
 .hero h1 {
   margin: 0;
-  font-size: 50px;
+  font-size: 55px;
 }
 
 .hero__content {
@@ -183,6 +209,22 @@ main {
   text-align: center;
 }
 
+.overview a {
+  text-decoration: underline;
+}
+
 .hide {
   display: none;
+}
+
+/***** ABOUT ME SECTION ****/
+
+.about {
+  color: #fff;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 130px;
+  margin-top: 80px;
+  width: 960px;
+  line-height: 2;
 }
