@@ -13,23 +13,24 @@ const hero = document.querySelector(".hero");
 getMovies(API_URL);
 
 function getMovies(url) {
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data.results);
-      showMovies(data.results);
-    });
+   fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+         console.log(data.results);
+         showMovies(data.results);
+      });
 }
 
 function showMovies(data) {
-  main.innerHTML = "";
+   main.innerHTML = "";
 
-  data.forEach((movie) => {
-    const { title, poster_path, vote_average, overview, release_date } = movie;
-    const movieEl = document.createElement("div");
-    const year = release_date.split("-");
-    movieEl.classList.add("movie");
-    movieEl.innerHTML = `
+   data.forEach((movie) => {
+      const { title, poster_path, vote_average, overview, release_date } =
+         movie;
+      const movieEl = document.createElement("div");
+      const year = release_date.split("-");
+      movieEl.classList.add("movie");
+      movieEl.innerHTML = `
       <img
           class='poster'
           src="${IMG_URL + poster_path}"
@@ -40,7 +41,7 @@ function showMovies(data) {
 
             <div class='movie-info__rating'>
                   <img class='movie-info__star' src='${getApproval(
-                    vote_average
+                     vote_average
                   )}'/>
                   <span>&#160;${vote_average}/10</span>
             </div>
@@ -57,40 +58,76 @@ function showMovies(data) {
          </div>
         `;
 
-    // if overview.length > overview = overview.substring(0, 10)
-    // color changing rating code <span class='${getColor(vote_average)}'>${vote_average}/10</span>;
-    main.appendChild(movieEl);
-  });
+      // if overview.length > overview = overview.substring(0, 10)
+      // color changing rating code <span class='${getColor(vote_average)}'>${vote_average}/10</span>;
+      main.appendChild(movieEl);
+   });
 }
 
 function getApproval(rating) {
-  if (rating >= 6) {
-    return "img/star-yellow.svg";
-  } else {
-    return "img/star-red.svg";
-  }
+   if (rating >= 6) {
+      return "img/star-yellow.svg";
+   } else {
+      return "img/star-red.svg";
+   }
 }
 
 function getColor(vote) {
-  if (vote >= 8) {
-    return "green";
-  } else if (vote >= 5) {
-    return "orange";
-  } else {
-    return "red";
-  }
+   if (vote >= 8) {
+      return "green";
+   } else if (vote >= 5) {
+      return "orange";
+   } else {
+      return "red";
+   }
 }
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
+   e.preventDefault();
 
-  const searchTerm = search.value;
+   const searchTerm = search.value;
 
-  if (searchTerm) {
-    hero.classList.add("hide");
-    getMovies(searchURL + "&query=" + searchTerm);
-  } else {
-    hero.classList.remove("hide");
-    getMovies(API_URL);
-  }
+   if (searchTerm) {
+      hero.classList.add("hide");
+      getMovies(searchURL + "&query=" + searchTerm);
+   } else {
+      hero.classList.remove("hide");
+      getMovies(API_URL);
+   }
 });
+
+///// Responsive Nav Bar
+
+const navSlide = () => {
+   const burger = document.querySelector(".burger");
+   const nav = document.querySelector(".nav-links");
+   const navLinks = document.querySelectorAll(".nav-links li");
+
+   burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+
+      // Animate links
+      navLinks.forEach((link, index) => {
+         if (link.style.animation) {
+            link.style.animation = "";
+         } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${
+               index / 7 + 0.5
+            }s`;
+         }
+      });
+
+      // Burger Animation
+      burger.classList.toggle("toggle");
+   });
+};
+
+// if have many functions add them like this then invoke app() below
+const app = () => {
+   navSlide();
+   //    navSlide();
+   //    navSlide();
+   //    navSlide();
+};
+
+app();
