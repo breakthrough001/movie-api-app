@@ -261,6 +261,10 @@ nav ul {
       overflow-x: hidden;
    }
 
+   .search {
+      width: 70%;
+   }
+
    .logo {
       width: 140px;
    }
