@@ -8,6 +8,7 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const overview = document.querySelector(".overview");
+const hero = document.querySelector(".hero");
 
 getMovies(API_URL);
 
@@ -86,8 +87,10 @@ form.addEventListener("submit", (e) => {
   const searchTerm = search.value;
 
   if (searchTerm) {
+    hero.classList.add("hide");
     getMovies(searchURL + "&query=" + searchTerm);
   } else {
+    hero.classList.remove("hide");
     getMovies(API_URL);
   }
 });
