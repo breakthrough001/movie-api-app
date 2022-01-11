@@ -1,91 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="styles.css" />
-      <title>Movie App</title>
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   </head>
-   <body>
-      <header>
-         <div class="container">
-            <img class="logo" src="img/logo.png" alt="" />
-            <form id="form">
-               <input
-                  type="text"
-                  placeholder="Search"
-                  id="search"
-                  class="search"
-               />
-            </form>
-         </div>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Flixster App</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img class="logo" src="img/logo.png" alt="" />
+        <form id="form">
+          <input type="text" placeholder="Search" id="search" class="search" />
+        </form>
+      </div>
+    </header>
 
-      <section class="hero">
-         <div class="hero__content">
-            <h1>The best movies found here</h1>
-            <p>Poke around or search your favorite films</p>
-         </div>
-      </section>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Find movies to watch now</h1>
+        <p>No more wasting time trying to find the perfect show</p>
+      </div>
+    </section>
 
-      <main id="main">
-         <div class="movie">
-            <img
-               src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80"
-               alt=""
-            />
-            <div class="movie-info">
-               <h3>Movie Title</h3>
-               <span class="green">9.8</span>
-            </div>
-            <div class="overview hide show">
-               <h3>Overview</h3>
-               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-               iure quae consectetur rem, animi laudantium nisi labore? Suscipit
-               quos mollitia, dolorum aliquid unde libero et enim dolorem in
-               inventore quod.
-            </div>
-         </div>
+    <main id="main">
+      <div class="movie">
+        <img
+          src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80"
+          alt=""
+        />
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
+        <div class="overview hide show">
+          <h3>Overview</h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iure
+          quae consectetur rem, animi laudantium nisi labore? Suscipit quos
+          mollitia, dolorum aliquid unde libero et enim dolorem in inventore
+          quod.
+        </div>
+      </div>
 
-         <div class="movie">
-            <img
-               src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80"
-               alt=""
-            />
-            <div class="movie-info">
-               <h3>Movie Title</h3>
-               <span class="green">9.8</span>
-            </div>
-            <div class="overview">
-               <h3>Overview</h3>
-               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-               iure quae consectetur rem, animi laudantium nisi labore? Suscipit
-               quos mollitia, dolorum aliquid unde libero et enim dolorem in
-               inventore quod.
-            </div>
-         </div>
+      <div class="movie">
+        <img
+          src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80"
+          alt=""
+        />
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iure
+          quae consectetur rem, animi laudantium nisi labore? Suscipit quos
+          mollitia, dolorum aliquid unde libero et enim dolorem in inventore
+          quod.
+        </div>
+      </div>
 
-         <div class="movie">
-            <img
-               src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80"
-               alt=""
-            />
-            <div class="movie-info">
-               <h3>Movie Title</h3>
-               <span class="green">9.8</span>
-            </div>
-            <div class="overview">
-               <h3>Overview</h3>
-               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-               iure quae consectetur rem, animi laudantium nisi labore? Suscipit
-               quos mollitia, dolorum aliquid unde libero et enim dolorem in
-               inventore quod.
-            </div>
-         </div>
-      </main>
+      <div class="movie">
+        <img
+          src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80"
+          alt=""
+        />
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iure
+          quae consectetur rem, animi laudantium nisi labore? Suscipit quos
+          mollitia, dolorum aliquid unde libero et enim dolorem in inventore
+          quod.
+        </div>
+      </div>
+    </main>
 
-      <script src="app.js"></script>
-   </body>
+    <script src="app.js"></script>
+  </body>
 </html>
