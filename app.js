@@ -46,15 +46,16 @@ function showMovies(data) {
                   <span>&#160;${vote_average}/10</span>
             </div>
 
-            <h3>${title}</h3>
-
+            <h3 id='movieTitle'>${title}</h3>
             <p>Release Year: ${year[0]}</p>
 
         </div>
 
-        <div class="overview">
-          <h3>Overview</h3>
-          <p>${overview.substring(0, 260)} — <a href="#">View More</a></p>
+        <div class='overview-container'>
+            <div class="overview">
+               <h3>Overview</h3>
+               <p>${overview}</p>
+            </div>
          </div>
         `;
 
