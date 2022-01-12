@@ -31,7 +31,7 @@ function showMovies(data) {
       const year = release_date.split("-");
       movieEl.classList.add("movie");
       movieEl.innerHTML = `
-      <img
+       <img
           class='poster'
           src="${IMG_URL + poster_path}"
           alt="${title}"
